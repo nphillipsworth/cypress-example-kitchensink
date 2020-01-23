@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kitchen Sink | Cypress Example">
+  <meta name="author" content="Cypress.io">
+  <meta name="copyright" content="Cypress.io Copyright (c) 2017">
+
+  <title>Cypress.io: Kitchen Sink</title>
+
+  <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/vendor/fira.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <script type="text/javascript">
+    function appendTextOnClick(el, text) {
+      var node = document.createElement("div");
+      var textnode = document.createTextNode(text);
+      node.appendChild(textnode);
+      el.appendChild(node);
+    }
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">cypress.io</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active" class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Commands <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/commands/guild">GUILD</a></li>
+              <li><a href="/commands/querying">Querying</a></li>
+              <li><a href="/commands/traversal">Traversal</a></li>
+              <li><a href="/commands/actions">Actions</a></li>
+              <li><a href="/commands/window">Window</a></li>
+              <li><a href="/commands/viewport">Viewport</a></li>
+              <li><a href="/commands/location">Location</a></li>
+              <li><a href="/commands/navigation">Navigation</a></li>
+              <li><a href="/commands/assertions">Assertions</a></li>
+              <li><a href="/commands/misc">Misc</a></li>
+              <li><a href="/commands/connectors">Connectors</a></li>
+              <li><a href="/commands/aliasing">Aliasing</a></li>
+              <li><a href="/commands/waiting">Waiting</a></li>
+              <li><a href="/commands/network-requests">Network Requests</a></li>
+              <li><a href="/commands/files">Files</a></li>
+              <li><a href="/commands/local-storage">Local Storage</a></li>
+              <li><a href="/commands/cookies">Cookies</a></li>
+              <li><a href="/commands/spies-stubs-clocks">Spies, Stubs &amp; Clocks</a></li>
+            </ul>
+          </li>
+          <li><a href="/utilities">Utilities</a></li>
+          <li><a href="/cypress-api">Cypress API</a></li>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="https://github.com/cypress-io/cypress-example-kitchensink">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner">
+    <div class="container">
+      <h1>Guild work</h1>
+      <p>Complete the following examples</p>
+    </div>
+  </div>
+  <div class="container content-container">
+    <div id="wait">
+      <div class="row">
+        <div class="col-xs-7">
+          <h4><a href="https://on.cypress.io/wait"></a>Very simple test</h4>
+          <p>Just select something and check its text</p>
+          <pre><code class="javascript">...</code></pre>
+        </div>
+        <div class="col-xs-5">
+          <div class="well">
+            <div data-testid="first-text">Verify first-text text</div>
+          </div>
+        </div>
+
+        <div class="col-xs-12"><hr></div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container content-container">
+    <div id="wait">
+      <div class="row">
+        <div class="col-xs-7">
+          <h4><a href="https://on.cypress.io/wait"></a>click the right element</h4>
+          <p>Click the button in the correct div</p>
+          <pre>after clicking correct button, look for text: 'Yay'</pre>
+        </div>
+        <div class="col-xs-5">
+          <div class="well">
+            <div style="border: 1px solid black;">
+              <h3>don't click</h3>
+              <button class="network-btn btn btn-primary" onclick="appendTextOnClick(this, 'BOO!')">button</button>
+            </div>
+
+            <div style="border: 1px solid black;">
+              <h3>click me</h3>
+              <button class="network-btn btn btn-primary" onclick="appendTextOnClick(this, 'Yay')">button</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12"><hr></div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container content-container">
+    <div id="wait">
+      <div class="row">
+        <div class="col-xs-7">
+          <h4><a href="https://on.cypress.io/wait"></a>Good selectors</h4>
+          <p>Click the button for eye colour (it may not always be brown)</p>
+          <pre>after clicking correct button, look for text: 'Well done'</pre>
+        </div>
+        <div class="col-xs-5">
+          <div class="well">
+            <h2>STATS</h2>
+            current hair:
+            <button class="network-btn btn btn-primary" onclick="appendTextOnClick(this, 'BOO!')">brown</button>
+            current eyes:
+            <button class="network-btn btn btn-primary" onclick="appendTextOnClick(this, 'Well done')">brown</button>
+            current height:
+            <button class="network-btn btn btn-primary" onclick="appendTextOnClick(this, 'BOO!')">6ft</button>
+          </div>
+        </div>
+
+        <div class="col-xs-12"><hr></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container content-container">
+    <div id="wait">
+      <div class="row">
+        <div class="col-xs-7">
+          <h4><a href="https://on.cypress.io/wait"></a>Thinking about asynchronicity</h4>
+          <p>This button takes a second to update, is that a problem?</p>
+          <pre><code class="javascript">...</code></pre>
+        </div>
+        <div class="col-xs-5">
+          <div class="well">
+            <h3>click me</h3>
+            <button class="network-btn btn btn-primary" onclick="setTimeout(() => appendTextOnClick(this, 'delayed'), 1000)">timed result</button>
+          </div>
+        </div>
+
+        <div class="col-xs-12"><hr></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container content-container">
+    <div id="wait">
+      <div class="row">
+        <div class="col-xs-7">
+          <h4><a href="https://on.cypress.io/wait"></a>Negative testing</h4>
+          <p>Write a test that checks the no error button doesn't cause an error</p>
+          <pre><code class="javascript">you can use the other button to check that your test code would work.</code></pre>
+        </div>
+        <div class="col-xs-5">
+          <div class="well">
+            <button class="network-btn btn btn-primary" onclick="setTimeout(() => appendTextOnClick(this, 'ERROR_OUTPUT'), 1000)">expected error</button>
+            <button class="network-btn btn btn-primary">expected not to error</button>
+          </div>
+        </div>
+
+        <div class="col-xs-12"><hr></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container content-container">
+    <div id="wait">
+      <div class="row">
+        <div class="col-xs-7">
+          <h4><a href="https://on.cypress.io/wait"></a>Re-usable code.</h4>
+          <p>Write a reusable function to make testing the following clauses simple</p>
+          <pre>
+            click the first button and see the text wibble
+            click the second button and see the text flibble
+            click the third button and see the text bibble
+          </pre>
+        </div>
+        <div class="col-xs-5">
+          <div class="well">
+            <div>
+              <button class="network-btn btn btn-primary" onclick="appendTextOnClick(this, 'wibble')">first</button>
+            </div>
+            <div>
+              <button class="network-btn btn btn-primary" onclick="appendTextOnClick(this, 'flibble')">second</button>
+            </div>
+            <div>
+              <button class="network-btn btn btn-primary" onclick="appendTextOnClick(this, 'bibble')">third</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12"><hr></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container content-container">
+    <div id="wait">
+      <div class="row">
+        <div class="col-xs-7">
+          <h4><a href="https://on.cypress.io/wait"></a>Using fixtures.</h4>
+          <p>Use fixtures to load data into a form</p>
+          <pre><code class="javascript">...</code></pre>
+        </div>
+        <div class="col-xs-5">
+          <div class="well">
+            <form>
+              <div class="form-group">
+                <label>height
+                <input name="height" type="text" class="form-control wait-input1"></label>
+              </div>
+              <div class="form-group">
+                <label>weight
+                <input name="weight" type="text" class="form-control wait-input2"></label>
+              </div>
+              <div class="form-group">
+                <label>special ability
+                <input name="special ability" type="text" class="form-control wait-input3"></label>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-xs-12"><hr></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/vendor/jquery-1.12.0.min.js"></script>
+  <script src="/assets/js/vendor/bootstrap.min.js"></script>
+  <script src="/assets/js/vendor/highlight.pack.js"></script>
+  <script src="/assets/js/scripts.js"></script>
+</body>
+</html>
